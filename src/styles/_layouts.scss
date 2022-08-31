@@ -1,0 +1,14 @@
+@mixin flexRow($alignItems: end) {
+  display: flex;
+  align-items: $alignItems;
+  flex-direction: row;
+}
+@mixin flexColumn($justifyContent: center) {
+  display: flex;
+  justify-content: $justifyContent;
+  flex-direction: column;
+}
+
+@mixin gridMargin() {
+  margin: 0 80px;
+}

@@ -1,0 +1,16 @@
+@use "styles/layouts" as layout;
+.classesSection {
+  @include layout.gridMargin();
+  position: relative;
+  .cleverBox {
+    @include layout.flexColumn();
+    gap: 30px;
+    align-items: center;
+    margin-top: 70px;
+    .cleverTopRow,
+    .cleverBottomRow {
+      @include layout.flexRow;
+      gap: 30px;
+    }
+  }
+}

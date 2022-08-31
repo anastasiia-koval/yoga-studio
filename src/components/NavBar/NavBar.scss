@@ -1,0 +1,16 @@
+@use "styles/colors" as color;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  border-bottom: 1px dashed color.$main_green;
+  .navbarLinks {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    li {
+      cursor: pointer;
+    }
+  }
+}
