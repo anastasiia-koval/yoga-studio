@@ -12,7 +12,7 @@ button {
   transition: outline-offset 100ms ease;
 }
 
-button:hover {
+.mainButton:hover {
   outline-offset: 5px;
   outline: 2px solid color.$main_green;
   &:active {
@@ -20,6 +20,16 @@ button:hover {
     outline-offset: -5px;
   }
 }
+
+.secondaryButton:hover {
+  outline-offset: 5px;
+  outline: 2px solid color.$white;
+  &:active {
+    transform: scale(0.96);
+    outline-offset: -5px;
+  }
+}
+
 .mainButton {
   background-color: color.$main_green;
   color: color.$white;
@@ -28,4 +38,5 @@ button:hover {
 .secondaryButton {
   background-color: color.$white;
   color: color.$main_green;
+  outline: 2px solid color.$white;
 }

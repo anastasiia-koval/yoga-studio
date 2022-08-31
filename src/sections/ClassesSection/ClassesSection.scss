@@ -1,16 +1,36 @@
 @use "styles/layouts" as layout;
+@use "styles/colors" as color;
+
 .classesSection {
-  @include layout.gridMargin();
-  position: relative;
-  .cleverBox {
-    @include layout.flexColumn();
-    gap: 30px;
-    align-items: center;
-    margin-top: 70px;
-    .cleverTopRow,
-    .cleverBottomRow {
-      @include layout.flexRow;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .cleverContent {
+    @include layout.gridMargin();
+    position: relative;
+    .cleverBox {
+      @include layout.flexColumn();
       gap: 30px;
+      align-items: center;
+      margin-top: 70px;
+      .cleverTopRow,
+      .cleverBottomRow {
+        @include layout.flexRow;
+        gap: 30px;
+      }
+    }
+  }
+  .chooseClassContainer {
+    background-color: color.$main_green;
+    margin-top: 180px;
+    padding: 100px 0;
+    @include layout.flexColumn();
+    align-items: center;
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 30px;
+      color: color.$white;
     }
   }
 }
