@@ -1,0 +1,109 @@
+@use "styles/colors" as color;
+.memberCard {
+  .cardContent {
+    position: relative;
+    display: block;
+    // overflow: hidden;
+    width: 350px;
+    // height: 200px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+      transition: 0.2s ease-in-out;
+    }
+    .cardOverlay {
+      position: absolute;
+      bottom: 0;
+      //   top: 0;
+      right: 0;
+      left: 0;
+      //   transform: translateY(100%);
+      transition: 0.2s ease-in-out;
+      //   background-color: color.$main_green;
+      height: fit-content;
+      .cardHeader {
+        color: color.$white;
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        background-color: color.$main_green;
+        justify-content: center;
+        width: 50%;
+        // transform: translateY(-100%);
+        transition: width 0.2s ease;
+      }
+      .cardDescription {
+        padding: 0 50px 50px;
+        margin: 0;
+        // opacity: 0;
+        color: color.$white;
+        background-color: color.$main_green;
+        // transform: translateY(-100%);
+        overflow: hidden;
+      }
+    }
+    // .cardOverlay {
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   z-index: 1;
+    //   //   background-color: color.$main_green;
+    //   transform: translateY(100%);
+    //   transition: 0.2s ease-in-out;
+
+    //   .cardHeader {
+    //     position: relative;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     width: 50%;
+    //     padding: 12px 40px;
+    //     margin: 0 auto;
+    //     border-radius: 10px;
+    //     background-color: color.$main_green;
+    //     transform: translateY(-100%);
+    //     transition: 0.2s ease-in-out, width 0.2s ease, opacity 0.3s ease;
+    //     gap: 2em;
+
+    //     p {
+    //       font-weight: 400;
+    //       font-size: 20px;
+    //       color: color.$white;
+    //       margin: 0;
+    //     }
+    //   }
+    //   .cardDescription {
+    //     padding: 0 50px 50px;
+    //     margin: 0;
+    //     opacity: 0;
+    //     color: color.$white;
+    //     background-color: color.$main_green;
+    //     display: -webkit-box;
+    //     overflow: hidden;
+    //   }
+    // }
+  }
+}
+
+.memberCard:hover .cardHeader {
+  width: 100% !important;
+  padding: 12px 0 !important;
+
+  border-radius: 0 !important;
+  transition: width 0.2s ease;
+}
+.memberCard:hover img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+  filter: blur(1px);
+}
+.memberCard:hover .cardOverlay {
+  transform: translateY(0);
+}
+.memberCard:hover .cardDescription {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease;
+}

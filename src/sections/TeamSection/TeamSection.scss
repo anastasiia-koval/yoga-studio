@@ -1,0 +1,9 @@
+@use "styles/layouts" as layout;
+#teamSection {
+  @include layout.gridMargin();
+
+  .teamMemberContainer {
+    @include layout.flexRow($alignItems: center);
+    justify-content: space-around;
+  }
+}

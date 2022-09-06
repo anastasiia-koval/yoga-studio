@@ -1,6 +1,11 @@
 import React from "react";
 import { NavBar } from "./components";
-import { Landing, ClassesSection } from "./sections";
+import {
+  Landing,
+  ClassesSection,
+  TeamSection,
+  ContactUsSection,
+} from "./sections";
 import "./App.scss";
 
 const App = () => {
@@ -10,6 +15,8 @@ const App = () => {
       <main>
         <Landing />
         <ClassesSection />
+        <TeamSection />
+        <ContactUsSection />
       </main>
     </div>
   );

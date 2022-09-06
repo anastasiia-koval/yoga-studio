@@ -1,5 +1,9 @@
 @use "styles/colors" as color;
 .app {
   background-color: color.$background_color;
-  width: 100vw;
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
 }

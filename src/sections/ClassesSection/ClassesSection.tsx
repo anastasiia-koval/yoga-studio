@@ -6,7 +6,7 @@ import { ReactComponent as BackgroundLines } from "assets/backgroundLines.svg";
 
 const ClassesSection = () => {
   return (
-    <div className="classesSection">
+    <div id="classesSection">
       <div className="cleverContent">
         <Header text="Classes" />
         <div className="cleverBox">
