@@ -1,5 +1,54 @@
 @use "styles/layouts" as layout;
+@use "styles/colors" as color;
 
 #contactUsSection {
   @include layout.gridMargin();
+  @include layout.flexColumn();
+  .subtext {
+    font-size: 24px;
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
+  .contactusContainer {
+    border: 2px solid color.$main_green;
+    border-radius: 100px 0px 100px 100px;
+    padding: 56px 20%;
+    margin: 0 180px;
+    margin-top: 70px;
+    position: relative;
+    .designRectangle {
+      border: 2px solid color.$main_green;
+      border-radius: 100px 0px 100px 100px;
+      position: absolute;
+    }
+    form {
+      @include layout.flexColumn();
+      align-items: center;
+      gap: 20px;
+      .inputContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        input {
+          border: 1px solid color.$main_green;
+          width: 100%;
+          box-sizing: border-box;
+          background-color: color.$grey;
+          padding: 13px 19px;
+          border-radius: 10px;
+          ::placeholder {
+            font-size: 12px;
+          }
+        }
+        .errors {
+          margin: 0;
+          color: color.$error;
+          font-size: 12px;
+        }
+        &:last-of-type {
+          margin-bottom: 17px;
+        }
+      }
+    }
+  }
 }

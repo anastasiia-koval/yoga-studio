@@ -1,5 +1,5 @@
 import React from "react";
-import { NavBar } from "./components";
+import { NavBar, Footer } from "./components";
 import {
   Landing,
   ClassesSection,
@@ -18,6 +18,7 @@ const App = () => {
         <TeamSection />
         <ContactUsSection />
       </main>
+      <Footer />
     </div>
   );
 };

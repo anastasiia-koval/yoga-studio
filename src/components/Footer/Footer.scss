@@ -1,0 +1,50 @@
+@use "styles/layouts" as layout;
+@use "styles/colors" as color;
+
+footer {
+  margin-top: 120px;
+  border-top: 1px dashed color.$main_green;
+  padding: 49px 97px;
+  @include layout.flexRow($alignItems: center);
+  justify-content: space-between;
+  .leftFooterContent {
+    @include layout.flexRow($alignItems: center);
+    gap: 40px;
+    .logoContainer {
+      @include layout.flexColumn();
+      align-items: center;
+      gap: 30px;
+      .location {
+        @include layout.flexRow($alignItems: center);
+        // justify-content: center;
+      }
+    }
+
+    .linksContainer {
+      .footerLinks {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        li {
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        &:first-of-type {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .rightFooterContainer {
+    @include layout.flexRow($alignItems: center);
+    gap: 15px;
+    .iconFooter {
+      margin-top: -20px;
+      @include layout.flexRow($alignItems: center);
+      gap: 20px;
+    }
+  }
+}
